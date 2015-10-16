@@ -27,66 +27,156 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\audio\winrt\Audio.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ForcedIncludeFiles>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\MediaStreamer.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ForcedIncludeFiles>
-    </ClCompile>
-    <ClCompile Include="..\..\audio\winrt\SimpleAudioEngine.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      </ForcedIncludeFiles>
-      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      </ForcedIncludeFiles>
-    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\win-8.1\Audio.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\win-8.1\MediaStreamer.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\win-8.1\SimpleAudioEngine.cpp" />
+    <ClCompile Include="..\..\extensions\AssetsManager\AssetsManager.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBAnimationManager.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBFileLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBKeyframe.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBReader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBSequence.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBSequenceProperty.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCBValue.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCControlButtonLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCControlLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCData.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCLabelBMFontLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCLabelTTFLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCLayerColorLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCLayerGradientLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCLayerLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCMenuItemImageLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCMenuItemLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCNode+CCBRelativePositioning.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCNodeLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCNodeLoaderLibrary.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCParticleSystemQuadLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCScale9SpriteLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCScrollViewLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CCBReader\CCSpriteLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\ActionTimeline\CCActionTimeline.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\ActionTimeline\CCActionTimelineCache.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\ActionTimeline\CCFrame.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\ActionTimeline\CCNodeReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\ActionTimeline\CCTimeLine.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionEaseEx.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionFrame.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionFrameEasing.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionManager.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionNode.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Action\CCActionObject.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\animation\CCArmatureAnimation.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\animation\CCProcessBase.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\animation\CCTween.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\CCArmature.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\CCBone.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\datas\CCDatas.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\display\CCBatchNode.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\display\CCDecorativeDisplay.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\display\CCDisplayFactory.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\display\CCDisplayManager.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\display\CCSkin.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\physics\CCColliderDetector.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCArmatureDataManager.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCArmatureDefine.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCDataReaderHelper.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCSpriteFrameCacheHelper.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCTransformHelp.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCTweenFunction.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Armature\utils\CCUtilMath.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\CocoStudio.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Components\CCComAttribute.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Components\CCComAudio.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Components\CCComController.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Components\CCComRender.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Components\CCInputDelegate.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\BaseClasses\UIWidget.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayout.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayoutDefine.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayoutParameter.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\System\CocosGUI.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\System\UIHelper.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\System\UITouchGroup.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIListView.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIPageView.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIScrollView.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIButton.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UICheckBox.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIImageView.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabel.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabelAtlas.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabelBMFont.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILoadingBar.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIRichText.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UISlider.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UITextField.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Json\CocoLoader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Json\DictionaryHelper.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\GUIReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\SceneReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ButtonReader\ButtonReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\CheckBoxReader\CheckBoxReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ImageViewReader\ImageViewReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelAtlasReader\LabelAtlasReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelBMFontReader\LabelBMFontReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelReader\LabelReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LayoutReader\LayoutReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ListViewReader\ListViewReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LoadingBarReader\LoadingBarReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\PageViewReader\PageViewReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ScrollViewReader\ScrollViewReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\SliderReader\SliderReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\TextFieldReader\TextFieldReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\WidgetReader.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Trigger\ObjectFactory.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Trigger\TriggerBase.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Trigger\TriggerMng.cpp" />
+    <ClCompile Include="..\..\extensions\CocoStudio\Trigger\TriggerObj.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControl.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlButton.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlSlider.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlStepper.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlSwitch.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCControlUtils.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCInvocation.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCEditBox\CCEditBox.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCEditBox\CCEditBoxImplWinrt.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCEditBox\UIEditBoxImpl-winrt.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCSorting.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
+    <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
+    <ClCompile Include="..\..\extensions\network\HttpClient.cpp" />
+    <ClCompile Include="..\..\extensions\network\WebSocketWinRT.cpp" />
+    <ClCompile Include="..\..\extensions\physics_nodes\CCPhysicsDebugNode.cpp" />
+    <ClCompile Include="..\..\extensions\physics_nodes\CCPhysicsSprite.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Animation.cpp" />
+    <ClCompile Include="..\..\extensions\spine\AnimationState.cpp" />
+    <ClCompile Include="..\..\extensions\spine\AnimationStateData.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Atlas.cpp" />
+    <ClCompile Include="..\..\extensions\spine\AtlasAttachmentLoader.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Attachment.cpp" />
+    <ClCompile Include="..\..\extensions\spine\AttachmentLoader.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Bone.cpp" />
+    <ClCompile Include="..\..\extensions\spine\BoneData.cpp" />
+    <ClCompile Include="..\..\extensions\spine\CCSkeleton.cpp" />
+    <ClCompile Include="..\..\extensions\spine\CCSkeletonAnimation.cpp" />
+    <ClCompile Include="..\..\extensions\spine\extension.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Json.cpp" />
+    <ClCompile Include="..\..\extensions\spine\RegionAttachment.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Skeleton.cpp" />
+    <ClCompile Include="..\..\extensions\spine\SkeletonData.cpp" />
+    <ClCompile Include="..\..\extensions\spine\SkeletonJson.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Skin.cpp" />
+    <ClCompile Include="..\..\extensions\spine\Slot.cpp" />
+    <ClCompile Include="..\..\extensions\spine\SlotData.cpp" />
+    <ClCompile Include="..\..\extensions\spine\spine-cocos2dx.cpp" />
     <ClCompile Include="..\actions\CCAction.cpp" />
     <ClCompile Include="..\actions\CCActionCamera.cpp" />
     <ClCompile Include="..\actions\CCActionCatmullRom.cpp" />
@@ -103,6 +193,48 @@
     <ClCompile Include="..\base_nodes\CCAtlasNode.cpp" />
     <ClCompile Include="..\base_nodes\CCGLBufferedNode.cpp" />
     <ClCompile Include="..\base_nodes\CCNode.cpp" />
+    <ClCompile Include="..\CCCamera.cpp" />
+    <ClCompile Include="..\CCConfiguration.cpp" />
+    <ClCompile Include="..\CCDirector.cpp" />
+    <ClCompile Include="..\ccFPSImages.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\CCScheduler.cpp" />
     <ClCompile Include="..\cocoa\CCAffineTransform.cpp" />
     <ClCompile Include="..\cocoa\CCArray.cpp" />
     <ClCompile Include="..\cocoa\CCAutoreleasePool.cpp" />
@@ -114,6 +246,7 @@
     <ClCompile Include="..\cocoa\CCSet.cpp" />
     <ClCompile Include="..\cocoa\CCString.cpp" />
     <ClCompile Include="..\cocoa\CCZone.cpp" />
+    <ClCompile Include="..\cocos2d.cpp" />
     <ClCompile Include="..\draw_nodes\CCDrawingPrimitives.cpp" />
     <ClCompile Include="..\draw_nodes\CCDrawNode.cpp" />
     <ClCompile Include="..\effects\CCGrabber.cpp" />
@@ -137,6 +270,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\GL\mat4stack.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -157,6 +308,24 @@
       </PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\GL\matrix.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -177,6 +346,24 @@
       </PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\mat3.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -197,6 +384,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\mat4.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -217,6 +422,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\neon_matrix_impl.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -237,6 +460,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\plane.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -257,6 +498,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\quaternion.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -277,6 +536,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\ray2.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -297,6 +574,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\utility.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -317,6 +612,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\vec2.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -337,6 +650,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\vec3.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -357,6 +688,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\kazmath\src\vec4.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -377,6 +726,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderFile>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsWinRT>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
     </ClCompile>
     <ClCompile Include="..\keypad_dispatcher\CCKeypadDelegate.cpp" />
     <ClCompile Include="..\keypad_dispatcher\CCKeypadDispatcher.cpp" />
@@ -400,10 +767,33 @@
     <ClCompile Include="..\particle_nodes\CCParticleSystemQuad.cpp" />
     <ClCompile Include="..\platform\CCEGLViewProtocol.cpp" />
     <ClCompile Include="..\platform\CCFileUtils.cpp" />
-    <ClCompile Include="..\platform\CCImageCommonWebp.cpp" />
     <ClCompile Include="..\platform\CCSAXParser.cpp" />
     <ClCompile Include="..\platform\CCThread.cpp" />
     <ClCompile Include="..\platform\platform.cpp" />
+    <ClCompile Include="..\platform\win-8.1\CCEGLView.cpp" />
+    <ClCompile Include="..\platform\win-8.1\InputEvent.cpp" />
+    <ClCompile Include="..\platform\win-8.1\Keyboard-winrt.cpp" />
+    <ClCompile Include="..\platform\win10\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\platform\winrt\CCAccelerometer.cpp" />
+    <ClCompile Include="..\platform\winrt\CCApplication.cpp" />
+    <ClCompile Include="..\platform\winrt\CCCommon.cpp" />
+    <ClCompile Include="..\platform\winrt\CCDevice.cpp" />
+    <ClCompile Include="..\platform\winrt\CCFileUtilsWinRT.cpp" />
+    <ClCompile Include="..\platform\winrt\CCFreeTypeFont.cpp" />
+    <ClCompile Include="..\platform\winrt\CCImage.cpp" />
+    <ClCompile Include="..\platform\winrt\CCPrecompiledShaders.cpp" />
+    <ClCompile Include="..\platform\winrt\CCPThreadWinRT.cpp" />
+    <ClCompile Include="..\platform\winrt\CCStdC.cpp" />
+    <ClCompile Include="..\platform\winrt\CCWinRTUtils.cpp" />
+    <ClCompile Include="..\platform\winrt\DirectXBase.cpp" />
+    <ClCompile Include="..\platform\winrt\sha1.cpp" />
     <ClCompile Include="..\script_support\CCScriptSupport.cpp" />
     <ClCompile Include="..\shaders\CCGLProgram.cpp" />
     <ClCompile Include="..\shaders\ccGLStateCache.cpp" />
@@ -451,11 +841,182 @@
     <ClCompile Include="..\touch_dispatcher\CCTouchHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\audio\include\AudioEngine.h" />
-    <ClInclude Include="..\..\audio\include\Export.h" />
-    <ClInclude Include="..\..\audio\include\SimpleAudioEngine.h" />
-    <ClInclude Include="..\..\audio\winrt\Audio.h" />
-    <ClInclude Include="..\..\audio\winrt\MediaStreamer.h" />
+    <ClInclude Include="..\..\CocosDenshion\win-8.1\Audio.h" />
+    <ClInclude Include="..\..\CocosDenshion\win-8.1\MediaStreamer.h" />
+    <ClInclude Include="..\..\extensions\AssetsManager\AssetsManager.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBAnimationManager.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBFileLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBKeyframe.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBMemberVariableAssigner.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBReader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBSelectorResolver.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBSequence.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBSequenceProperty.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCBValue.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCControlButtonLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCControlLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCData.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCLabelBMFontLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCLabelTTFLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCLayerColorLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCLayerGradientLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCLayerLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCMenuItemImageLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCMenuItemLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCMenuLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCNode+CCBRelativePositioning.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCNodeLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCNodeLoaderLibrary.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCNodeLoaderListener.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCParticleSystemQuadLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCScale9SpriteLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCScrollViewLoader.h" />
+    <ClInclude Include="..\..\extensions\CCBReader\CCSpriteLoader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCActionTimeline.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCActionTimelineCache.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCFrame.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCNodeReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCTimeLine.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\ActionTimeline\CCTimelineMacro.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionEaseEx.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionFrame.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionFrameEasing.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionManager.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionNode.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Action\CCActionObject.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\animation\CCArmatureAnimation.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\animation\CCProcessBase.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\animation\CCTween.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\CCArmature.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\CCBone.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\datas\CCDatas.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\display\CCBatchNode.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\display\CCDecorativeDisplay.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\display\CCDisplayFactory.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\display\CCDisplayManager.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\display\CCSkin.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\external_tool\sigslot.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\physics\CCColliderDetector.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCArmatureDataManager.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCArmatureDefine.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCDataReaderHelper.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCSpriteFrameCacheHelper.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCTransformHelp.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCTweenFunction.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Armature\utils\CCUtilMath.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\CocoStudio.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComAttribute.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComAudio.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComBase.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComController.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComRender.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Components\CCInputDelegate.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\BaseClasses\UIWidget.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayout.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayoutDefine.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\Layouts\UILayoutParameter.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\System\CocosGUI.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\System\GUIDefine.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\System\UIHelper.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\System\UITouchGroup.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\Compatible\CompatibleClasses.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIListView.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIPageView.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIScrollInterface.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\ScrollWidget\UIScrollView.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIButton.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UICheckBox.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIImageView.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabel.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabelAtlas.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILabelBMFont.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UILoadingBar.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UIRichText.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UISlider.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\GUI\UIWidgets\UITextField.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\CocoLoader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\DictionaryHelper.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\document.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\filestream.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\internal\pow10.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\internal\stack.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\prettywriter.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\rapidjson.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\reader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\stringbuffer.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Json\rapidjson\writer.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\GUIReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\SceneReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ButtonReader\ButtonReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\CheckBoxReader\CheckBoxReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ImageViewReader\ImageViewReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelAtlasReader\LabelAtlasReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelBMFontReader\LabelBMFontReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LabelReader\LabelReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LayoutReader\LayoutReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ListViewReader\ListViewReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\LoadingBarReader\LoadingBarReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\PageViewReader\PageViewReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\ScrollViewReader\ScrollViewReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\SliderReader\SliderReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\TextFieldReader\TextFieldReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\WidgetReader.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\WidgetReaderProtocol.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Trigger\ObjectFactory.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Trigger\TriggerBase.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Trigger\TriggerMng.h" />
+    <ClInclude Include="..\..\extensions\CocoStudio\Trigger\TriggerObj.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControl.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlButton.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlColourPicker.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlExtensions.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlHuePicker.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlPotentiometer.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlSlider.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlStepper.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlSwitch.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCControlUtils.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCInvocation.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCControlExtension\CCScale9Sprite.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCEditBox\CCEditBox.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCEditBox\CCEditBoxImpl.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCEditBox\CCEditBoxImplWinrt.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCEditBox\UIEditBoxImpl-winrt.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCScrollView.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCSorting.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableView.h" />
+    <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.h" />
+    <ClInclude Include="..\..\extensions\network\HttpClient.h" />
+    <ClInclude Include="..\..\extensions\network\HttpRequest.h" />
+    <ClInclude Include="..\..\extensions\network\HttpResponse.h" />
+    <ClInclude Include="..\..\extensions\network\WebSocket.h" />
+    <ClInclude Include="..\..\extensions\network\WebSocketWinRT.h" />
+    <ClInclude Include="..\..\extensions\physics_nodes\CCPhysicsDebugNode.h" />
+    <ClInclude Include="..\..\extensions\physics_nodes\CCPhysicsSprite.h" />
+    <ClInclude Include="..\..\extensions\spine\Animation.h" />
+    <ClInclude Include="..\..\extensions\spine\AnimationState.h" />
+    <ClInclude Include="..\..\extensions\spine\AnimationStateData.h" />
+    <ClInclude Include="..\..\extensions\spine\Atlas.h" />
+    <ClInclude Include="..\..\extensions\spine\AtlasAttachmentLoader.h" />
+    <ClInclude Include="..\..\extensions\spine\Attachment.h" />
+    <ClInclude Include="..\..\extensions\spine\AttachmentLoader.h" />
+    <ClInclude Include="..\..\extensions\spine\Bone.h" />
+    <ClInclude Include="..\..\extensions\spine\BoneData.h" />
+    <ClInclude Include="..\..\extensions\spine\CCSkeleton.h" />
+    <ClInclude Include="..\..\extensions\spine\CCSkeletonAnimation.h" />
+    <ClInclude Include="..\..\extensions\spine\extension.h" />
+    <ClInclude Include="..\..\extensions\spine\Json.h" />
+    <ClInclude Include="..\..\extensions\spine\RegionAttachment.h" />
+    <ClInclude Include="..\..\extensions\spine\Skeleton.h" />
+    <ClInclude Include="..\..\extensions\spine\SkeletonData.h" />
+    <ClInclude Include="..\..\extensions\spine\SkeletonJson.h" />
+    <ClInclude Include="..\..\extensions\spine\Skin.h" />
+    <ClInclude Include="..\..\extensions\spine\Slot.h" />
+    <ClInclude Include="..\..\extensions\spine\SlotData.h" />
+    <ClInclude Include="..\..\extensions\spine\spine-cocos2dx.h" />
+    <ClInclude Include="..\..\extensions\spine\spine.h" />
     <ClInclude Include="..\actions\CCAction.h" />
     <ClInclude Include="..\actions\CCActionCamera.h" />
     <ClInclude Include="..\actions\CCActionCatmullRom.h" />
@@ -472,6 +1033,11 @@
     <ClInclude Include="..\base_nodes\CCAtlasNode.h" />
     <ClInclude Include="..\base_nodes\CCGLBufferedNode.h" />
     <ClInclude Include="..\base_nodes\CCNode.h" />
+    <ClInclude Include="..\CCCamera.h" />
+    <ClInclude Include="..\CCConfiguration.h" />
+    <ClInclude Include="..\CCDirector.h" />
+    <ClInclude Include="..\ccFPSImages.h" />
+    <ClInclude Include="..\CCScheduler.h" />
     <ClInclude Include="..\cocoa\CCAffineTransform.h" />
     <ClInclude Include="..\cocoa\CCArray.h" />
     <ClInclude Include="..\cocoa\CCAutoreleasePool.h" />
@@ -546,6 +1112,26 @@
     <ClInclude Include="..\platform\CCSAXParser.h" />
     <ClInclude Include="..\platform\CCThread.h" />
     <ClInclude Include="..\platform\platform.h" />
+    <ClInclude Include="..\platform\win-8.1\CCEGLView-Win8_1.h" />
+    <ClInclude Include="..\platform\win-8.1\InputEvent.h" />
+    <ClInclude Include="..\platform\win-8.1\InputEventTypes.h" />
+    <ClInclude Include="..\platform\win-8.1\Keyboard-winrt.h" />
+    <ClInclude Include="..\platform\win10\pch.h" />
+    <ClInclude Include="..\platform\winrt\CCAccelerometer.h" />
+    <ClInclude Include="..\platform\winrt\CCApplication.h" />
+    <ClInclude Include="..\platform\winrt\CCFileUtilsWinRT.h" />
+    <ClInclude Include="..\platform\winrt\CCFreeTypeFont.h" />
+    <ClInclude Include="..\platform\winrt\CCGL.h" />
+    <ClInclude Include="..\platform\winrt\CCGL_Angle.h" />
+    <ClInclude Include="..\platform\winrt\CCGL_gl2dx.h" />
+    <ClInclude Include="..\platform\winrt\CCPlatformDefine.h" />
+    <ClInclude Include="..\platform\winrt\CCPrecompiledShaders.h" />
+    <ClInclude Include="..\platform\winrt\CCPThreadWinRT.h" />
+    <ClInclude Include="..\platform\winrt\CCStdC.h" />
+    <ClInclude Include="..\platform\winrt\CCWinRTUtils.h" />
+    <ClInclude Include="..\platform\winrt\DirectXBase.h" />
+    <ClInclude Include="..\platform\winrt\DirectXHelper.h" />
+    <ClInclude Include="..\platform\winrt\sha1.h" />
     <ClInclude Include="..\script_support\CCScriptSupport.h" />
     <ClInclude Include="..\shaders\CCGLProgram.h" />
     <ClInclude Include="..\shaders\ccGLStateCache.h" />
@@ -612,22 +1198,16 @@
     <ClInclude Include="..\touch_dispatcher\CCTouchHandler.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\external\Box2D\proj-win10\libbox2d.vcxproj">
-      <Project>{0c32d479-46d5-46c3-9aa9-0a8ff8320516}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\external\bullet\proj.win10\libbullet.vcxproj">
-      <Project>{ecee1119-ce2e-4f7e-83a8-1932ea48e893}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\external\recast\proj.win10\librecast.vcxproj">
-      <Project>{f551524d-8a70-4b2f-a7c2-28ae61150022}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\..\editor-support\spine\proj.win10\libSpine.vcxproj">
-      <Project>{4b3ba10a-941f-4e08-8a50-8a7fcb822bb8}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\shaders\ccShader_Position_uColor-no-gl_PointSize.vert" />
     <None Include="..\support\user_default\CCUserDefault.mm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\external\Box2D\proj.win10\libbox2d.vcxproj">
+      <Project>{0c32d479-46d5-46c3-9aa9-0a8ff8320516}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\external\chipmunk\proj.win10\chipmunk.vcxproj">
+      <Project>{c7a48118-6eb2-473e-9e10-5789287ece7e}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{07c2895d-720c-487d-b7b4-12c293ea533f}</ProjectGuid>
@@ -683,21 +1263,33 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\platform\win10\win10.props" />
+    <Import Project="EngineRoot.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup />
@@ -744,6 +1336,7 @@
       <AdditionalIncludeDirectories>$(EngineRoot)external\win10-specific\zlib\include;$(EngineRoot)external\freetype2\include\win10\freetype2;$(EngineRoot)external\protobuf-lite\src;$(EngineRoot)external\protobuf-lite\win32;$(EngineRoot)external\win10-specific\OggDecoder\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -764,6 +1357,7 @@
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -783,6 +1377,7 @@
       <AdditionalIncludeDirectories>$(EngineRoot)external\win10-specific\zlib\include;$(EngineRoot)external\freetype2\include\win10\freetype2;$(EngineRoot)external\protobuf-lite\src;$(EngineRoot)external\protobuf-lite\win32;$(EngineRoot)external\win10-specific\OggDecoder\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -803,6 +1398,7 @@
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -822,6 +1418,7 @@
       <AdditionalIncludeDirectories>$(EngineRoot)external\win10-specific\zlib\include;$(EngineRoot)external\freetype2\include\win10\freetype2;$(EngineRoot)external\protobuf-lite\src;$(EngineRoot)external\protobuf-lite\win32;$(EngineRoot)external\win10-specific\OggDecoder\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -842,6 +1439,7 @@
       <AdditionalOptions>/Zm384 /bigobj %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

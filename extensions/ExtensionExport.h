@@ -21,7 +21,7 @@
             #define NULL    ((void *)0)
         #endif
     #endif
-#elif defined(WINRT_8_1)
+#elif defined(WINRT_UNIVERSAL)
     #if defined(_USREXDLL)
         #define CC_EX_DLL     __declspec(dllexport)
     #else         /* use a DLL library */

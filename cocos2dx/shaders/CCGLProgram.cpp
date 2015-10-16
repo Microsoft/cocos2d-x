@@ -192,7 +192,7 @@ bool CCGLProgram::compileShader(GLuint * shader, GLenum type, const GLchar* sour
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_WIN32 && CC_TARGET_PLATFORM != CC_PLATFORM_LINUX && CC_TARGET_PLATFORM != CC_PLATFORM_MAC)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_NACL
         "precision highp float;\n"
-#elif defined (WINRT_8_1)
+#elif defined (WINRT_UNIVERSAL)
         "precision mediump float;\n"
 #else
         (type == GL_VERTEX_SHADER ? "precision highp float;\n" : "precision mediump float;\n"),

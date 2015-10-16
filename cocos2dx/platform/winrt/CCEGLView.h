@@ -26,7 +26,7 @@ THE SOFTWARE.
 #ifndef __CC_EGLVIEW_WINRT_H__
 #define __CC_EGLVIEW_WINRT_H__
 
-#ifdef WINRT_8_1
+#ifdef WINRT_UNIVERSAL
 #include "CCEGLView-Win8_1.h"
 #else
 #include "CCStdC.h"
@@ -40,7 +40,7 @@ THE SOFTWARE.
 #include <agile.h>
 #include <DirectXMath.h>
 
-#ifndef WINRT_8_1
+#ifndef WINRT_UNIVERSAL
 #include "esUtil.h"
 #endif
 
@@ -91,7 +91,7 @@ private:
 	bool m_textInputEnabled;
 	Microsoft::WRL::ComPtr<IWinrtEglWindow> m_eglWindow;
 
-#ifndef WINRT_8_1
+#ifndef WINRT_UNIVERSAL
 	ESContext m_esContext;
 #endif
 	Windows::UI::Xaml::Controls::TextBox^ m_textBox;
@@ -162,6 +162,6 @@ private:
 
 NS_CC_END
 
-#endif // WINRT_8_1
+#endif // WINRT_UNIVERSAL
 
 #endif    // end of __CC_EGLVIEW_WINRT_H__

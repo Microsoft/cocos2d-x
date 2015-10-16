@@ -25,7 +25,7 @@ private:
     cocos2d::CCLabelTTF* m_labelStatusCode;
 };
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WINRT && !defined(WINRT_8_1)
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WINRT && !defined(WINRT_UNIVERSAL)
 inline void runHttpClientTest()  { return; }
 #else
 void runHttpClientTest();

@@ -30,7 +30,7 @@ THE SOFTWARE.
 #define	glClearDepth				glClearDepthf
 #define GL_WRITE_ONLY				GL_WRITE_ONLY_OES
 
-#ifdef WINRT_8_1
+#ifdef WINRT_UNIVERSAL
 #include "EGL/egl.h"
 #include "EGL/eglext.h"
 #include "EGL/eglplatform.h"

@@ -101,7 +101,7 @@ void CCAccelerometer::setDelegate(CCAccelerometerDelegate* pDelegate)
 				    m_obAccelerationValue.y = reading->AccelerationY;
                     break;
                }
-#elif defined(WINRT_8_1) // Windows Store App
+#elif defined(WINRT_UNIVERSAL) // Windows Store App
                 auto orientation = CCEGLView::sharedOpenGLView()->getDeviceOrientation();
 
                 // from http://msdn.microsoft.com/en-us/library/windows/apps/dn440593
