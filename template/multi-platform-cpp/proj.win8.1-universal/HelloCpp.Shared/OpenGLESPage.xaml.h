@@ -26,7 +26,7 @@
 
 #include "Cocos2dRenderer.h"
 
-namespace cocos2d
+namespace CocosAppWinRT
 {
     public ref class OpenGLESPage sealed
     {

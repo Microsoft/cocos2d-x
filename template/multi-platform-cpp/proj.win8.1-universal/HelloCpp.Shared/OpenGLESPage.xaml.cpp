@@ -19,6 +19,7 @@
 #include "App.xaml.h"
 #include "OpenGLESPage.xaml.h"
 
+using namespace CocosAppWinRT;
 using namespace cocos2d;
 using namespace Platform;
 using namespace Concurrency;
