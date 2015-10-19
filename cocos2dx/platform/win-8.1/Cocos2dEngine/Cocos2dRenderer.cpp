@@ -18,9 +18,8 @@
 
 #include "Cocos2dRenderer.h"
 #include "AppDelegate.h"
-#include "CCEGLView-Win8_1.h"
+#include "CCEglView-Win8_1.h"
 #include "CCApplication.h"
-#include "cocos2d.h"
 
 // These are used by the shader compilation methods.
 #include <vector>
@@ -28,30 +27,22 @@
 #include <fstream>
 
 using namespace Platform;
-using namespace Windows::Foundation;
 using namespace Windows::UI::Core;
 using namespace Windows::UI::Xaml::Controls;
 using namespace Windows::Graphics::Display;
 
 USING_NS_CC;
 
-
-Cocos2dRenderer::Cocos2dRenderer(int width, int height, float dpi, CoreDispatcher^ dispatcher, Panel^ panel)
+Cocos2dRenderer::Cocos2dRenderer(int width, int height, float dpi, DisplayOrientations orientation, CoreDispatcher^ dispatcher, Panel^ panel)
     : m_app(nullptr)
     , m_width(width)
     , m_height(height)
     , m_dpi(dpi)
-    , m_orientation(DisplayOrientations::None)
     , m_dispatcher(dispatcher)
     , m_panel(panel)
+    , m_orientation(orientation)
 {
     m_app = new AppDelegate();
-    CCEGLView* pEGLView = new CCEGLView();
-    pEGLView->Create(width, height);
-    pEGLView->setViewName("Cocos2d-x");
-    pEGLView->setDispatcher(dispatcher);
-    pEGLView->setPanel(panel);
-    CCApplication::sharedApplication()->run();
 }
 
 Cocos2dRenderer::~Cocos2dRenderer()
@@ -59,31 +50,83 @@ Cocos2dRenderer::~Cocos2dRenderer()
     delete m_app;
 }
 
-// Draws a basic triangle
-void Cocos2dRenderer::Draw(GLsizei width, GLsizei height, Windows::Graphics::Display::DisplayOrientations orientation, float dpi)
+void Cocos2dRenderer::Resume()
 {
-    CCEGLView* pEGLView = CCEGLView::sharedOpenGLView();
+    CCEGLView* glView = CCEGLView::sharedOpenGLView();
+
+    if (!glView)
+    {
+        CCEGLView* glView = new CCEGLView();
+        glView->Create(m_width, m_height);
+        glView->setViewName("Cocos2d-x");
+        glView->setDispatcher(m_dispatcher.Get());
+        glView->setPanel(m_panel.Get());
+        CCApplication::sharedApplication()->run();
+    }
+    else
+    {
+        CCApplication::sharedApplication()->applicationWillEnterForeground();
+    }
+}
+
+void Cocos2dRenderer::Pause()
+{
+    CCApplication::sharedApplication()->applicationDidEnterBackground();
+
+}
+
+bool Cocos2dRenderer::AppShouldExit()
+{
+    return CCEGLView::sharedOpenGLView()->AppShouldExit();
+}
+
+void Cocos2dRenderer::DeviceLost()
+{
+    Pause();
+
+#if 0
+    auto director = cocos2d::Director::getInstance();
+    if (director->getOpenglView()) {
+        cocos2d::GL::invalidateStateCache();
+        cocos2d::GLProgramCache::getInstance()->reloadDefaultGLPrograms();
+        cocos2d::DrawPrimitives::init();
+        cocos2d::VolatileTextureMgr::reloadAllTextures();
+
+        cocos2d::EventCustom recreatedEvent(EVENT_RENDERER_RECREATED);
+        director->getEventDispatcher()->dispatchEvent(&recreatedEvent);
+        director->setGLDefaultValues();
+
+        Application::getInstance()->applicationWillEnterForeground();
+        cocos2d::EventCustom foregroundEvent(EVENT_COME_TO_FOREGROUND);
+        cocos2d::Director::getInstance()->getEventDispatcher()->dispatchEvent(&foregroundEvent);
+    }
+#endif
+}
+
+void Cocos2dRenderer::Draw(GLsizei width, GLsizei height, float dpi, DisplayOrientations orientation)
+{
+    CCEGLView* glView = CCEGLView::sharedOpenGLView();
+
+    if (orientation != m_orientation)
+    {
+        m_orientation = orientation;
+        glView->UpdateOrientation(orientation);
+    }
 
     if (width != m_width || height != m_height)
-    {
+    { 
         m_width = width;
         m_height = height;
-        pEGLView->UpdateForWindowSizeChange(static_cast<float>(width), static_cast<float>(height));
+        glView->UpdateForWindowSizeChange(static_cast<float>(width), static_cast<float>(height));
     }
 
     if (dpi != m_dpi)
     {
         m_dpi = dpi;
-        //CCEGLView::sharedOpenGLView()->SetDPI(m_dpi);
+        //glView->SetDPI(m_dpi);
     }
 
-    if (orientation != m_orientation)
-    {
-        m_orientation = orientation;
-        pEGLView->UpdateOrientation(m_orientation);
-    }
-
-    pEGLView->Render();
+    glView->Render();
 }
 
 void Cocos2dRenderer::QueuePointerEvent(cocos2d::PointerEventType type, Windows::UI::Core::PointerEventArgs^ args)
@@ -91,17 +134,16 @@ void Cocos2dRenderer::QueuePointerEvent(cocos2d::PointerEventType type, Windows:
     CCEGLView::sharedOpenGLView()->QueuePointerEvent(type, args);
 }
 
-void Cocos2dRenderer::QueueKeyBoardEvent(cocos2d::Cocos2dKeyEvent type, Windows::UI::Core::KeyEventArgs^ e)
-{
-    //CCEGLView::sharedOpenGLView()->QueuePointerEvent(type, e);
-}
-
 void Cocos2dRenderer::QueueBackButtonEvent()
 {
     CCEGLView::sharedOpenGLView()->QueueBackKeyPress();
 }
 
-bool Cocos2dRenderer::AppShouldExit()
+void Cocos2dRenderer::QueueKeyboardEvent(cocos2d::Cocos2dKeyEvent type, Windows::UI::Core::KeyEventArgs^ args)
 {
-    return CCEGLView::sharedOpenGLView()->AppShouldExit();
+    // keyboard events are handled internally
+	//CCEglView::sharedOpenglView()->QueueWinRTKeyboardEvent(type, args);
 }
+
+
+

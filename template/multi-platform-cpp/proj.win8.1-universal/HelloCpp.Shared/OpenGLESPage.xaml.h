@@ -21,6 +21,8 @@
 #include "OpenGLES.h"
 #include "OpenGLESPage.g.h"
 #include <memory>
+#include <condition_variable>
+#include <mutex>
 
 #include "Cocos2dRenderer.h"
 
@@ -31,6 +33,7 @@ namespace cocos2d
     public:
         OpenGLESPage();
         virtual ~OpenGLESPage();
+        void SetVisibility(bool isVisible);
 
     internal:
         OpenGLESPage(OpenGLES* openGLES);
@@ -38,9 +41,7 @@ namespace cocos2d
     private:
         void OnPageLoaded(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
         void OnVisibilityChanged(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::VisibilityChangedEventArgs^ args);
-        void OnSwapChainPanelSizeChanged(Platform::Object^ sender, Windows::UI::Xaml::SizeChangedEventArgs^ e);
-        void GetSwapChainPanelSize(GLsizei* width, GLsizei* height);
-#if (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
+#if (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP) || _MSC_VER >= 1900
         void OnBackButtonPressed(Platform::Object^ sender, Windows::Phone::UI::Input::BackPressedEventArgs^ args);
 #endif
         void CreateRenderSurface();
@@ -50,35 +51,40 @@ namespace cocos2d
         void StartRenderLoop();
         void StopRenderLoop();
 
-        // DisplayInformation event handlers.
-        void OnDpiChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnOrientationChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-        void OnDisplayContentsInvalidated(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
-
-        Windows::Graphics::Display::DisplayOrientations m_orientation;
+        void CreateInput();
 
         OpenGLES* mOpenGLES;
-        std::shared_ptr<cocos2d::Cocos2dRenderer> m_renderer;
-
-        Windows::Foundation::Size mSwapChainPanelSize;
-        Concurrency::critical_section mCriticalSection;
-
-        Windows::Foundation::Size mCustomRenderSurfaceSize;
-        bool mUseCustomRenderSurfaceSize;
+        std::shared_ptr<Cocos2dRenderer> mRenderer;
 
         EGLSurface mRenderSurface;     // This surface is associated with a swapChainPanel on the page
         Concurrency::critical_section mRenderSurfaceCriticalSection;
         Windows::Foundation::IAsyncAction^ mRenderLoopWorker;
 
         // Track user input on a background worker thread.
-        Windows::Foundation::IAsyncAction^ m_inputLoopWorker;
-        Windows::UI::Core::CoreIndependentInputSource^ m_coreInput;
+        Windows::Foundation::IAsyncAction^ mInputLoopWorker;
+        Windows::UI::Core::CoreIndependentInputSource^ mCoreInput;
 
-        // Independent input handling functions.
+        // Independent touch and pen handling functions.
         void OnPointerPressed(Platform::Object^ sender, Windows::UI::Core::PointerEventArgs^ e);
         void OnPointerMoved(Platform::Object^ sender, Windows::UI::Core::PointerEventArgs^ e);
         void OnPointerReleased(Platform::Object^ sender, Windows::UI::Core::PointerEventArgs^ e);
+        void OnPointerWheelChanged(Platform::Object^ sender, Windows::UI::Core::PointerEventArgs^ e);
 
-        float m_dpi;
+        // Independent keyboard handling functions.
+		void OnKeyPressed(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::KeyEventArgs^ args);
+		void OnKeyReleased(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::KeyEventArgs^ args);
+
+		void OnCharacterReceived(Windows::UI::Core::CoreWindow^ sender, Windows::UI::Core::CharacterReceivedEventArgs^ args);
+
+        void OnOrientationChanged(Windows::Graphics::Display::DisplayInformation^ sender, Platform::Object^ args);
+
+        float mDpi;
+        bool mDeviceLost;
+        bool mVisible;
+        bool mCursorVisible;
+        Windows::Graphics::Display::DisplayOrientations mOrientation;
+
+        std::mutex mSleepMutex;
+        std::condition_variable mSleepCondition;
     };
 }
