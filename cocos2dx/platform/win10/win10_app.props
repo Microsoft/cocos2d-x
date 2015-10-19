@@ -2,12 +2,16 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="COCOS2D_DLL_PATHS">
+    <ZLibBinPath Condition=" '$(ZLibBinPath)' == '' ">$(EngineRoot)cocos2dx\platform\third_party\$(Cocos2dPlatform)\zlib\prebuilt\$(Platform)\</ZLibBinPath>
     <AngleBinPath Condition=" '$(AngleBinPath)' == '' ">$(EngineRoot)cocos2dx\platform\third_party\$(Cocos2dPlatform)\angle\prebuilt\$(Platform)\</AngleBinPath>
     <CurlBinPath Condition=" '$(CurlBinPath)' == '' ">$(EngineRoot)cocos2dx\platform\third_party\$(Cocos2dPlatform)\curl\prebuilt\$(Platform)\</CurlBinPath>
     <WebsocketsBinPath Condition=" '$(WebsocketsBinPath)' == '' ">$(EngineRoot)external\libwebsockets\$(Cocos2dPlatform)\lib\$(Platform)\</WebsocketsBinPath>
-    <SQLiteBinPath Condition=" '$(SQLiteBinPath)' == '' ">$(EngineRoot)cocos2dx\platform\third_party\$(Cocos2dPlatform)\sqlite3\prebuilt\$(Platform)\</SQLiteBinPath>
+    <SQLiteBinPath Condition=" '$(SQLiteBinPath)' == '' ">$(EngineRoot)external\sqlite3\libraries\$(Cocos2dPlatform)\$(Platform)\</SQLiteBinPath>
   </PropertyGroup>
   <ItemGroup Label="COCOS2D_DLLS">
+	<None Include="$(ZLibBinPath)zlib.dll">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="$(AngleBinPath)libEGL.dll">
       <DeploymentContent>true</DeploymentContent>
     </None>
