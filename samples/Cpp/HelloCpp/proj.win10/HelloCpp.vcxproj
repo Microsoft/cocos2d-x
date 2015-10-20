@@ -125,6 +125,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>HelloCpp_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -167,7 +170,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -191,7 +194,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -218,7 +221,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -242,7 +245,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -269,7 +272,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -293,7 +296,7 @@ copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\Cocos2dEngine\OpenGLESPage.xaml.h"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.cpp"
 copy "$(EngineRoot)cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h" "$(EngineRoot)template\multi-platform-cpp\proj.win10\App\pch.h"
-copy "$(EngineRoot)samples\Cpp\HelloCpp\proj.win10\resources.props" "..\..\..\..\template\multi-platform-cpp\proj.win10\App\resources.props"
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

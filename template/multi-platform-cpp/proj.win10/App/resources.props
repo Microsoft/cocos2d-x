@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   
   <ItemGroup>
-    <_CustomResource Include="..\Resources\**\*">
+    <_CustomResource Include="..\..\Resources\**\*">
       <Link>Assets\Resources\%(RecursiveDir)%(FileName)%(Extension)</Link>
       <DeploymentContent>true</DeploymentContent>
     </_CustomResource>

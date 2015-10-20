@@ -65,14 +65,22 @@ void Cocos2dRenderer::Resume()
     }
     else
     {
+        ccGLInvalidateStateCache();
+        CCShaderCache::sharedShaderCache()->reloadDefaultShaders();
+        ccDrawInit();
+        CCTextureCache::sharedTextureCache()->reloadAllTextures();
+        CCNotificationCenter::sharedNotificationCenter()->postNotification(EVENT_COME_TO_FOREGROUND, NULL);
+        CCDirector::sharedDirector()->setGLDefaultValues();
+        CCDirector::sharedDirector()->resume();
         CCApplication::sharedApplication()->applicationWillEnterForeground();
     }
 }
 
 void Cocos2dRenderer::Pause()
 {
+    CCDirector::sharedDirector()->pause();
+    CCDirector::sharedDirector()->purgeCachedData(); 
     CCApplication::sharedApplication()->applicationDidEnterBackground();
-
 }
 
 bool Cocos2dRenderer::AppShouldExit()

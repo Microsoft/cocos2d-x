@@ -29,8 +29,11 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
-
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WP8
 public enum class Cocos2dEvent
+#else
+enum class Cocos2dEvent
+#endif
 {
     ShowKeyboard,
     HideKeyboard,
@@ -38,7 +41,11 @@ public enum class Cocos2dEvent
 };
 
 
-public enum class Cocos2dKeyEvent : int 
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WP8
+public enum class Cocos2dKeyEvent : int
+#else
+enum class Cocos2dKeyEvent : int
+#endif
 {
     Text,
     Escape,

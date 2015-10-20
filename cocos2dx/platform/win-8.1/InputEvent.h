@@ -32,10 +32,12 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WP8
 public delegate void Cocos2dEventDelegate(Cocos2dEvent event, Platform::String^ text);
 public delegate void Cocos2dMessageBoxDelegate(Platform::String^  title, Platform::String^ text);
 public delegate void Cocos2dEditBoxDelegate(Platform::String^ strPlaceHolder, Platform::String^ strText, int maxLength, int inputMode, int inputFlag, Windows::Foundation::EventHandler<Platform::String^>^ receiveHandler);
 public delegate void Cocos2dOpenURLDelegate(Platform::String^ url);
+#endif
 
 enum PointerEventType
 {
