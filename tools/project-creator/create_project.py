@@ -80,6 +80,7 @@ def checkParams(context):
                           "android",
                           "win32",
                           "winrt",
+                          "win10",
                           "wp8",
                           "mac",
                           "blackberry",

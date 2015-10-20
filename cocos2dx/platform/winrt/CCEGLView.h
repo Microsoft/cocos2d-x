@@ -27,7 +27,7 @@ THE SOFTWARE.
 #define __CC_EGLVIEW_WINRT_H__
 
 #ifdef WINRT_UNIVERSAL
-#include "CCEGLView-Win8_1.h"
+#include "platform/win-8.1/CCEGLView-Win8_1.h"
 #else
 #include "CCStdC.h"
 #include "platform/CCCommon.h"

@@ -20,50 +20,47 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.xaml.cpp" />
-    <ClCompile Include="..\Classes\AppDelegate.cpp">
+    <ClCompile Include="Cocos2dEngine\Cocos2dRenderer.cpp">
+      <Filter>Cocos2dEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Cocos2dEngine\OpenGLES.cpp">
+      <Filter>Cocos2dEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Cocos2dEngine\OpenGLESPage.xaml.cpp" />
+    <ClCompile Include="..\..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\Cocos2dRenderer.cpp">
-      <Filter>Cocos2dEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLES.cpp">
-      <Filter>Cocos2dEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\pch.cpp">
-      <Filter>Cocos2dEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.xaml.h" />
-    <ClInclude Include="..\Classes\AppDelegate.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AppMacros.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\Cocos2dRenderer.h">
+    <ClInclude Include="Cocos2dEngine\Cocos2dRenderer.h">
       <Filter>Cocos2dEngine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLES.h">
+    <ClInclude Include="Cocos2dEngine\OpenGLES.h">
       <Filter>Cocos2dEngine</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\pch.h">
-      <Filter>Cocos2dEngine</Filter>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Cocos2dEngine\OpenGLESPage.xaml.h" />
+    <ClInclude Include="..\..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml.h" />
+    <ClInclude Include="..\..\Classes\AppMacros.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\HelloWorldScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HelloCpp_TemporaryKey.pfx" />
+    <None Include="$(ZLibBinPath)zlib.dll" />
     <None Include="$(AngleBinPath)libEGL.dll" />
     <None Include="$(AngleBinPath)libGLESv2.dll" />
     <None Include="$(WebsocketsBinPath)libwebsockets.dll" />
@@ -71,7 +68,11 @@
     <None Include="$(CurlBinPath)libcurl.dll" />
     <None Include="$(CurlBinPath)libeay32.dll" />
     <None Include="$(CurlBinPath)ssleay32.dll" />
-    <None Include="$(ZLibBinPath)zlib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Cocos2dEngine\OpenGLESPage.xaml">
+      <Filter>Cocos2dEngine</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
@@ -95,10 +96,5 @@
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine\OpenGLESPage.xaml">
-      <Filter>Cocos2dEngine</Filter>
-    </Page>
   </ItemGroup>
 </Project>
