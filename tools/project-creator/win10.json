@@ -1,0 +1,16 @@
+{
+    "rename": [
+        "App/PROJECT_NAME.vcxproj",
+        "App/PROJECT_NAME.vcxproj.filters",
+        "App/PROJECT_NAME_TemporaryKey.pfx",
+        "PROJECT_NAME.sln"
+    ],
+    "remove": [ ],
+    "replace_package_name": [ ],
+    "replace_project_name": [ 
+         "App/PROJECT_NAME.vcxproj",
+         "App/PROJECT_NAME.vcxproj.filters",
+         "App/Package.appxmanifest",
+         "PROJECT_NAME.sln"
+    ]
+}
