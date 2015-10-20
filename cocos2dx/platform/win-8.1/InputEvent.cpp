@@ -65,7 +65,7 @@ void PointerEvent::execute()
     case PointerEventType::PointerReleased:
         CCEGLView::sharedOpenGLView()->OnPointerReleased(m_args.Get());
         break;
-    case PointerEventType::MouseWheelChanged:
+    case PointerEventType::PointerWheelChanged:
         CCEGLView::sharedOpenGLView()->OnPointerWheelChanged(nullptr, m_args.Get());
         break;
     }

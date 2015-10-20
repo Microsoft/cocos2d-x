@@ -42,7 +42,7 @@ enum PointerEventType
     PointerPressed,
     PointerMoved,
     PointerReleased,
-    MouseWheelChanged,
+    PointerWheelChanged,
 };
 
 class CC_DLL InputEvent

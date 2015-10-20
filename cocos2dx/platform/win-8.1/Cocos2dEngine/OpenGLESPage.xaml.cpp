@@ -362,7 +362,7 @@ void OpenGLESPage::OnPointerWheelChanged(Object^ sender, PointerEventArgs^ e)
 {
     if (mRenderer)
     {
-        mRenderer->QueuePointerEvent(PointerEventType::MouseWheelChanged, e);
+        mRenderer->QueuePointerEvent(PointerEventType::PointerWheelChanged, e);
     }
 }
 
