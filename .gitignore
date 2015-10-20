@@ -35,6 +35,7 @@ Generated Files
 AppPackages
 SubmissionInfo
 *.hps
+BundleArtifacts
 
 # Ignore files build by ndk and eclipse
 libs/
