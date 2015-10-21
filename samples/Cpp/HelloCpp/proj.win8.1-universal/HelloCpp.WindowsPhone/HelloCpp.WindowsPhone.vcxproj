@@ -94,6 +94,9 @@
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared" /eiycq
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared\" /eiycq</Command>
     </PostBuildEvent>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -107,6 +110,9 @@ xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared" /eiycq
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared\" /eiycq</Command>
     </PostBuildEvent>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -120,6 +126,9 @@ xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared" /eiycq
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared\" /eiycq</Command>
     </PostBuildEvent>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -133,6 +142,9 @@ xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\Cocos2dEngine" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared" /eiycq
 xcopy "..\..\..\..\..\cocos2dx\platform\win-8.1\resources.props" "..\..\..\..\..\template\multi-platform-cpp\proj.win8.1-universal\HelloCpp.Shared\" /eiycq</Command>
     </PostBuildEvent>
+    <Link>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

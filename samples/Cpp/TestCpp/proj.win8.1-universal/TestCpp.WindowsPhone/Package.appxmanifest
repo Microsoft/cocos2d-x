@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="839e6be3-2571-47d8-910b-1d7386788d3b" Publisher="CN=dalestam" Version="1.0.0.5" />
-  <mp:PhoneIdentity PhoneProductId="839e6be3-2571-47d8-910b-1d7386788d3b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="1FE26458-1BB7-457D-80DD-F45C315BEF58" Publisher="CN=dalestam" Version="1.0.0.5" />
+  <mp:PhoneIdentity PhoneProductId="04cb9c35-f43a-4f5b-b5f3-61632c4b874e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>TestCpp.WindowsPhone</DisplayName>
     <PublisherDisplayName>dalestam</PublisherDisplayName>
@@ -22,6 +22,7 @@
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
         <m3:InitialRotationPreference>
           <m3:Rotation Preference="landscape" />
+          <m3:Rotation Preference="landscapeFlipped" />
         </m3:InitialRotationPreference>
       </m3:VisualElements>
     </Application>
