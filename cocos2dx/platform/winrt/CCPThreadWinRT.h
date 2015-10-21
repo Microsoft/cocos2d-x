@@ -28,6 +28,7 @@ THE SOFTWARE.
 
 #include "platform/CCPlatformMacros.h"
 
+#define NOMINMAX
 #include <Windows.h>
 #include <thread>
 #include <functional>

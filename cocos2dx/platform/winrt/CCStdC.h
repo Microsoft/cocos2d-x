@@ -51,9 +51,17 @@ THE SOFTWARE.
 #include <time.h>
 
 // for MIN MAX and sys/time.h on win32 platform
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
 
-#define MIN     min
-#define MAX     max
+#ifndef MIN
+#define MIN(x,y) (((x) > (y)) ? (y) : (x))
+#endif  // MIN
+
+#ifndef MAX
+#define MAX(x,y) (((x) < (y)) ? (y) : (x))
+#endif  // MAX
 
 #if _MSC_VER >= 1600
     #include <stdint.h>
