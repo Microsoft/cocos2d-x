@@ -950,15 +950,6 @@
     <ClCompile Include="..\..\extensions\physics_nodes\CCPhysicsSprite.cpp">
       <Filter>libExtensions\physics_nodes</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\Audio.cpp">
-      <Filter>CocosDenshion</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\MediaStreamer.cpp">
-      <Filter>CocosDenshion</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\SimpleAudioEngine.cpp">
-      <Filter>CocosDenshion</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\extensions\CocoStudio\Components\CCComAttribute.cpp">
       <Filter>libExtensions\CocoStudio\Components</Filter>
     </ClCompile>
@@ -1102,6 +1093,21 @@
     </ClCompile>
     <ClCompile Include="..\support\user_default\CCUserDefault-winrt.cpp">
       <Filter>libcocos2d\support\user_default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\winrt\Audio.cpp">
+      <Filter>CocosDenshion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\winrt\AudioCachePlayer.cpp">
+      <Filter>CocosDenshion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\winrt\AudioSourceReader.cpp">
+      <Filter>CocosDenshion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\winrt\MediaStreamer.cpp">
+      <Filter>CocosDenshion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\CocosDenshion\winrt\SimpleAudioEngine.cpp">
+      <Filter>CocosDenshion</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1960,12 +1966,6 @@
     <ClInclude Include="..\..\extensions\physics_nodes\CCPhysicsSprite.h">
       <Filter>libExtensions\physics_nodes</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\CocosDenshion\win-8.1\Audio.h">
-      <Filter>CocosDenshion</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\CocosDenshion\win-8.1\MediaStreamer.h">
-      <Filter>CocosDenshion</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\extensions\CocoStudio\Components\CCComAttribute.h">
       <Filter>libExtensions\CocoStudio\Components</Filter>
     </ClInclude>
@@ -2151,6 +2151,18 @@
     </ClInclude>
     <ClInclude Include="..\..\extensions\CocoStudio\Reader\WidgetReader\PageViewReader\PageViewReader.h">
       <Filter>libExtensions\CocoStudio\Reader\WidgetReader\PageViewReader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CocosDenshion\winrt\Audio.h">
+      <Filter>CocosDenshion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CocosDenshion\winrt\AudioCachePlayer.h">
+      <Filter>CocosDenshion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CocosDenshion\winrt\AudioSourceReader.h">
+      <Filter>CocosDenshion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CocosDenshion\winrt\MediaStreamer.h">
+      <Filter>CocosDenshion</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

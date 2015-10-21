@@ -27,9 +27,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\Audio.cpp" />
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\MediaStreamer.cpp" />
-    <ClCompile Include="..\..\CocosDenshion\win-8.1\SimpleAudioEngine.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\winrt\Audio.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\winrt\AudioCachePlayer.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\winrt\AudioSourceReader.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\winrt\MediaStreamer.cpp" />
+    <ClCompile Include="..\..\CocosDenshion\winrt\SimpleAudioEngine.cpp" />
     <ClCompile Include="..\..\extensions\AssetsManager\AssetsManager.cpp" />
     <ClCompile Include="..\..\extensions\CCBReader\CCBAnimationManager.cpp" />
     <ClCompile Include="..\..\extensions\CCBReader\CCBFileLoader.cpp" />
@@ -847,8 +849,10 @@
     <ClCompile Include="..\touch_dispatcher\CCTouchHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\CocosDenshion\win-8.1\Audio.h" />
-    <ClInclude Include="..\..\CocosDenshion\win-8.1\MediaStreamer.h" />
+    <ClInclude Include="..\..\CocosDenshion\winrt\Audio.h" />
+    <ClInclude Include="..\..\CocosDenshion\winrt\AudioCachePlayer.h" />
+    <ClInclude Include="..\..\CocosDenshion\winrt\AudioSourceReader.h" />
+    <ClInclude Include="..\..\CocosDenshion\winrt\MediaStreamer.h" />
     <ClInclude Include="..\..\extensions\AssetsManager\AssetsManager.h" />
     <ClInclude Include="..\..\extensions\CCBReader\CCBAnimationManager.h" />
     <ClInclude Include="..\..\extensions\CCBReader\CCBFileLoader.h" />
