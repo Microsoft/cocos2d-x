@@ -89,10 +89,42 @@ std::string CCUnicodeToUtf8(const wchar_t* pwszStr)
 	return ret;
 }
 
+std::wstring StringUtf8ToWideChar(const std::string& strUtf8)
+{
+    std::wstring ret;
+    if (!strUtf8.empty())
+    {
+        int nNum = MultiByteToWideChar(CP_UTF8, 0, strUtf8.c_str(), -1, nullptr, 0);
+        if (nNum)
+        {
+            WCHAR* wideCharString = new WCHAR[nNum + 1];
+            wideCharString[0] = 0;
+
+            nNum = MultiByteToWideChar(CP_UTF8, 0, strUtf8.c_str(), -1, wideCharString, nNum + 1);
+
+            ret = wideCharString;
+            delete[] wideCharString;
+        }
+        else
+        {
+            CCLOG("Wrong convert to WideChar code:0x%x", GetLastError());
+        }
+    }
+    return ret;
+}
+
+
 std::string PlatformStringToString(Platform::String^ s) {
 	std::wstring t = std::wstring(s->Data());
 	return std::string(t.begin(),t.end());
 }
+
+Platform::String^ PlatformStringFromString(const std::string& s)
+{
+    std::wstring ws = StringUtf8ToWideChar(s);
+    return ref new Platform::String(ws.data(), ws.length());
+}
+
 
 // Method to convert a length in device-independent pixels (DIPs) to a length in physical pixels.
 float ConvertDipsToPixels(float dips)

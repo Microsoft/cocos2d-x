@@ -47,6 +47,10 @@ class CC_DLL CCUserDefault
 public:
     ~CCUserDefault();
 
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
+    void deleteValueForKey(const char* key);
+#endif
+
     // get value methods
 
     /**

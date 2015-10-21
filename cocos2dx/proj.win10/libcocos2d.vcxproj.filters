@@ -544,9 +544,6 @@
     <ClCompile Include="..\support\zip_support\ZipUtils.cpp">
       <Filter>libcocos2d\support\zip_support</Filter>
     </ClCompile>
-    <ClCompile Include="..\support\user_default\CCUserDefault.cpp">
-      <Filter>libcocos2d\support\user_default</Filter>
-    </ClCompile>
     <ClCompile Include="..\support\user_default\CCUserDefaultAndroid.cpp">
       <Filter>libcocos2d\support\user_default</Filter>
     </ClCompile>
@@ -1102,6 +1099,9 @@
     </ClCompile>
     <ClCompile Include="..\..\extensions\CocoStudio\Reader\WidgetReader\PageViewReader\PageViewReader.cpp">
       <Filter>libExtensions\CocoStudio\Reader\WidgetReader\PageViewReader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\support\user_default\CCUserDefault-winrt.cpp">
+      <Filter>libcocos2d\support\user_default</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

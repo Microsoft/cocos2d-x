@@ -824,7 +824,7 @@
     <ClCompile Include="..\support\image_support\TGAlib.cpp" />
     <ClCompile Include="..\support\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="..\support\TransformUtils.cpp" />
-    <ClCompile Include="..\support\user_default\CCUserDefault.cpp" />
+    <ClCompile Include="..\support\user_default\CCUserDefault-winrt.cpp" />
     <ClCompile Include="..\support\user_default\CCUserDefaultAndroid.cpp" />
     <ClCompile Include="..\support\zip_support\ioapi.cpp" />
     <ClCompile Include="..\support\zip_support\unzip.cpp" />

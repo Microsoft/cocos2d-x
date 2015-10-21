@@ -37,10 +37,12 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
+std::wstring CC_DLL StringUtf8ToWideChar(const std::string& strUtf8);
 
 std::wstring CC_DLL CCUtf8ToUnicode(const char * pszUtf8Str, unsigned len = -1);
 std::string CC_DLL CCUnicodeToUtf8(const wchar_t* pwszStr);
 std::string PlatformStringToString(Platform::String^ s);
+Platform::String^ PlatformStringFromString(const std::string& s);
 
 // Method to convert a length in device-independent pixels (DIPs) to a length in physical pixels.
 float ConvertDipsToPixels(float dips);
