@@ -7,6 +7,8 @@
     #define EFFECT_FILE        "effect2.ogg"
 #elif( CC_TARGET_PLATFORM == CC_PLATFORM_MARMALADE)
     #define EFFECT_FILE        "effect1.raw"
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+    #define EFFECT_FILE        "effect2.ogg"
 #else
     #define EFFECT_FILE        "effect1.wav"
 #endif // CC_PLATFORM_ANDROID

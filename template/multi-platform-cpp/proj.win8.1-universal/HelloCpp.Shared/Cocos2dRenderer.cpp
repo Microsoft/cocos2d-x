@@ -18,7 +18,7 @@
 
 #include "Cocos2dRenderer.h"
 #include "AppDelegate.h"
-#include "CCEglView-Win8_1.h"
+#include "platform/win-8.1/CCEGLView-Win8_1.h"
 #include "CCApplication.h"
 
 // These are used by the shader compilation methods.
@@ -57,7 +57,7 @@ void Cocos2dRenderer::Resume()
     if (!glView)
     {
         CCEGLView* glView = new CCEGLView();
-        glView->Create(m_width, m_height);
+        glView->Create(static_cast<float>(m_width), static_cast<float>(m_height));
         glView->setViewName("Cocos2d-x");
         glView->setDispatcher(m_dispatcher.Get());
         glView->setPanel(m_panel.Get());
@@ -65,14 +65,22 @@ void Cocos2dRenderer::Resume()
     }
     else
     {
+        ccGLInvalidateStateCache();
+        CCShaderCache::sharedShaderCache()->reloadDefaultShaders();
+        ccDrawInit();
+        CCTextureCache::sharedTextureCache()->reloadAllTextures();
+        CCNotificationCenter::sharedNotificationCenter()->postNotification(EVENT_COME_TO_FOREGROUND, NULL);
+        CCDirector::sharedDirector()->setGLDefaultValues();
+        CCDirector::sharedDirector()->resume();
         CCApplication::sharedApplication()->applicationWillEnterForeground();
     }
 }
 
 void Cocos2dRenderer::Pause()
 {
+    CCDirector::sharedDirector()->pause();
+    CCDirector::sharedDirector()->purgeCachedData(); 
     CCApplication::sharedApplication()->applicationDidEnterBackground();
-
 }
 
 bool Cocos2dRenderer::AppShouldExit()
