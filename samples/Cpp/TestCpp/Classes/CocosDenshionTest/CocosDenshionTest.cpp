@@ -17,6 +17,8 @@
     #define MUSIC_FILE        "background.ogg"
 #elif (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
     #define MUSIC_FILE        "background.wav"
+#elif (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+#define MUSIC_FILE        "background.ogg"
 #else
     #define MUSIC_FILE        "background.mp3"
 #endif // CC_PLATFORM_WIN32
