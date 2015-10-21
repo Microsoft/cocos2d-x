@@ -311,7 +311,7 @@ void CCFreeTypeFont::endLine()
     if(m_currentLine)
     {
         m_lines.push_back(m_currentLine);
-        m_textWidth = max(m_textWidth,m_currentLine->bbox.xMax - m_currentLine->bbox.xMin);
+        m_textWidth = max(m_textWidth,static_cast<int>(m_currentLine->bbox.xMax - m_currentLine->bbox.xMin));
         m_textHeight += m_lineHeight;
     }
 }
