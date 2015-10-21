@@ -26,6 +26,8 @@ THE SOFTWARE.
 #include "CCWinRTUtils.h"
 #include "platform/CCCommon.h"
 //#include <Shlobj.h>
+
+#define NOMINMAX
 #include <Windows.h>
 
 using namespace std;
@@ -126,6 +128,65 @@ bool CCFileUtilsWinRT::isFileExist(const std::string& strFilePath)
 #endif
 }
 #endif
+
+static std::string UTF8StringToMultiByte(const std::string& strUtf8)
+{
+    std::string ret;
+    if (!strUtf8.empty())
+    {
+        std::wstring strWideChar = StringUtf8ToWideChar(strUtf8);
+        int nNum = WideCharToMultiByte(CP_ACP, 0, strWideChar.c_str(), -1, nullptr, 0, nullptr, FALSE);
+        if (nNum)
+        {
+            char* ansiString = new char[nNum + 1];
+            ansiString[0] = 0;
+
+            nNum = WideCharToMultiByte(CP_ACP, 0, strWideChar.c_str(), -1, ansiString, nNum + 1, nullptr, FALSE);
+
+            ret = ansiString;
+            delete[] ansiString;
+        }
+        else
+        {
+            CCLOG("Wrong convert to Ansi code:0x%x", GetLastError());
+        }
+    }
+
+    return ret;
+}
+
+std::string CCFileUtilsWinRT::getSuitableFOpen(const std::string& filenameUtf8) const
+{
+    return UTF8StringToMultiByte(filenameUtf8);
+}
+
+long CCFileUtilsWinRT::getFileSize(const std::string &filepath)
+{
+    WIN32_FILE_ATTRIBUTE_DATA fad;
+    if (!GetFileAttributesEx(StringUtf8ToWideChar(filepath).c_str(), GetFileExInfoStandard, &fad))
+    {
+        return 0; // error condition, could call GetLastError to find out more
+    }
+    LARGE_INTEGER size;
+    size.HighPart = fad.nFileSizeHigh;
+    size.LowPart = fad.nFileSizeLow;
+    return (long)size.QuadPart;
+}
+
+
+bool CCFileUtilsWinRT::removeFile(const std::string &path)
+{
+    std::wstring wpath = StringUtf8ToWideChar(path);
+    if (DeleteFile(wpath.c_str()))
+    {
+        return true;
+    }
+    else
+    {
+        CCLOG("Remove file failed with error: %d", GetLastError());
+        return false;
+    }
+}
 
 bool CCFileUtilsWinRT::isAbsolutePath(const std::string& strPath)
 {

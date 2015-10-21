@@ -50,7 +50,10 @@ public:
     virtual std::string getWritablePath();
     virtual bool isFileExist(const std::string& strFilePath);
     virtual bool isAbsolutePath(const std::string& strPath);
-	
+    virtual bool removeFile(const std::string &filepath) override;
+    virtual long CCFileUtilsWinRT::getFileSize(const std::string &filepath) override;
+    virtual std::string getSuitableFOpen(const std::string& filenameUtf8) const override;
+
 	static std::string getAppPath();
 
 };

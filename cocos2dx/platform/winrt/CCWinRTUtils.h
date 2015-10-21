@@ -50,6 +50,10 @@ float getScaledDPIValue(float v);
 
 Concurrency::task<Platform::Array<byte>^> ReadDataAsync(Platform::String^ path);
 
+bool createMappedCacheFile(/*In*/ const std::string& srcFilePath, /*Out*/ std::string& cacheFilePath, /*Optional*/ std::string ext = "");
+void destroyMappedCacheFile(const std::string& key);
+
+std::string computeHashForFile(const std::string& filePath);
 
 NS_CC_END
 
