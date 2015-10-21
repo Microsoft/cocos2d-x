@@ -322,8 +322,44 @@ public:
      *  @lua NA
      */
     virtual bool isAbsolutePath(const std::string& strPath);
+  
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WINRT
+    /**
+    *  Removes a file.
+    *
+    *  @param filepath The full path of the file, it must be an absolute path.
+    *  @return True if the file have been removed successfully, false if not.
+    */
+    virtual bool removeFile(const std::string &filepath);
     
-    
+    /**
+    * Windows fopen can't support UTF-8 filename
+    * Need convert all parameters fopen and other 3rd-party libs
+    *
+    * @param filename std::string name file for conversion from utf-8
+    * @return std::string ansi filename in current locale
+    */
+    virtual std::string getSuitableFOpen(const std::string& filenameUtf8) const;
+
+    /**
+    *  Gets filename extension is a suffix (separated from the base filename by a dot) in lower case.
+    *  Examples of filename extensions are .png, .jpeg, .exe, .dmg and .txt.
+    *  @param filePath The path of the file, it could be a relative or absolute path.
+    *  @return suffix for filename in lower case or empty if a dot not found.
+    */
+    virtual std::string getFileExtension(const std::string& filePath) const;
+
+    /**
+    *  Retrieve the file size.
+    *
+    *  @note If a relative path was passed in, it will be inserted a default root path at the beginning.
+    *  @param filepath The path of the file, it could be a relative or absolute path.
+    *  @return The file size.
+    */
+    virtual long getFileSize(const std::string &filepath);
+
+#endif
+
     /**
      *  Sets/Gets whether to pop-up a message box when failed to load an image.
      */
@@ -376,6 +412,8 @@ protected:
      */
     virtual std::string getFullPathForDirectoryAndFilename(const std::string& strDirectory, const std::string& strFilename);
     
+
+
     /**
      *  Creates a dictionary by the contents of a file.
      *  @note This method is used internally.

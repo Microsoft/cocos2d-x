@@ -805,6 +805,40 @@ bool CCFileUtils::isAbsolutePath(const std::string& strPath)
     return strPath[0] == '/' ? true : false;
 }
 
+bool CCFileUtils::removeFile(const std::string &path)
+{
+    CCAssert(false, "FileUtils not support removeFile");
+    return false;
+}
+
+
+long CCFileUtils::getFileSize(const std::string &filepath)
+{
+    CCAssert(false, "getFileSize should be override by platform FileUtils");
+    return 0;
+}
+
+std::string CCFileUtils::getSuitableFOpen(const std::string& filenameUtf8) const
+{
+    CCAssert(false, "getSuitableFOpen should be override by platform FileUtils");
+    return filenameUtf8;
+}
+
+std::string CCFileUtils::getFileExtension(const std::string& filePath) const
+{
+    std::string fileExtension;
+    size_t pos = filePath.find_last_of('.');
+    if (pos != std::string::npos)
+    {
+        fileExtension = filePath.substr(pos, filePath.length());
+
+        std::transform(fileExtension.begin(), fileExtension.end(), fileExtension.begin(), ::tolower);
+    }
+
+    return fileExtension;
+}
+
+
 //////////////////////////////////////////////////////////////////////////
 // Notification support when getFileData from invalid file path.
 //////////////////////////////////////////////////////////////////////////
