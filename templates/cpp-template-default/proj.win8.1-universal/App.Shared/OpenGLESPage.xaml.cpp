@@ -102,6 +102,11 @@ OpenGLESPage::OpenGLESPage(OpenGLES* openGLES) :
     pointerVisualizationSettings->IsBarrelButtonFeedbackEnabled = false;
 #endif
 #endif
+    window->SizeChanged +=
+        ref new TypedEventHandler<CoreWindow^, WindowSizeChangedEventArgs^>(this, &OpenGLESPage::OnWindowSizeChanged);
+
+    swapChainPanel->SizeChanged += 
+        ref new Windows::UI::Xaml::SizeChangedEventHandler(this, &OpenGLESPage::OnSwapChainPanelSizeChanged);
 
     CreateInput();
 }
@@ -266,6 +271,8 @@ void OpenGLESPage::StartRenderLoop()
             }
 
             mOpenGLES->GetSurfaceDimensions(mRenderSurface, &panelWidth, &panelHeight);
+
+
             mRenderer.get()->Draw(panelWidth, panelHeight, mDpi, mOrientation);
 
             // Recreate input dispatch
@@ -447,6 +454,39 @@ void OpenGLESPage::OnVisibilityChanged(Windows::UI::Core::CoreWindow^ sender, Wi
     {
         SetVisibility(false);
     }
+}
+
+void OpenGLESPage::ResizeSwapChainPanel()
+{
+    // maintain a 1.5 Height/Width aspect ration
+    double desiredHeight = Window::Current->CoreWindow->Bounds.Height;
+    double desiredWidth = desiredHeight / 1.5;
+
+    if (desiredWidth >  Window::Current->CoreWindow->Bounds.Width)
+    {
+        desiredHeight = Window::Current->CoreWindow->Bounds.Width * 1.5;
+        desiredWidth = Window::Current->CoreWindow->Bounds.Width;
+    }
+
+    if (swapChainPanel->Width != desiredWidth)
+    {
+        swapChainPanel->Width = desiredWidth;
+    }
+
+    if (swapChainPanel->Height != desiredHeight)
+    {
+        swapChainPanel->Height = desiredHeight;
+    }
+}
+
+void OpenGLESPage::OnWindowSizeChanged(CoreWindow^ sender, WindowSizeChangedEventArgs^ e)
+{
+    ResizeSwapChainPanel();
+}
+
+void OpenGLESPage::OnSwapChainPanelSizeChanged(Object^ sender, SizeChangedEventArgs^ e)
+{
+    ResizeSwapChainPanel();
 }
 
 #if (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP) || _MSC_VER >= 1900
