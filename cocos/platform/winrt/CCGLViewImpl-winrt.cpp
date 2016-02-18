@@ -91,6 +91,7 @@ GLViewImpl::GLViewImpl()
     , m_orientation(DisplayOrientations::Landscape)
     , m_appShouldExit(false)
     , _lastMouseButtonPressed(MouseButton::None)
+    , m_screenResolutionScale(1.0f)
 {
 	s_pEglView = this;
     _viewName =  "cocos2dx";
@@ -127,6 +128,8 @@ bool GLViewImpl::Create(float width, float height, float dpi, DisplayOrientation
 {
     m_orientation = orientation;
     m_dpi = dpi;
+    m_screenResolutionScale = m_dpi / 96.0f;
+
     UpdateForWindowSizeChange(width, height);
     return true;
 }
@@ -553,8 +556,8 @@ cocos2d::Vec2 GLViewImpl::TransformToOrientation(Windows::Foundation::Point p)
 {
     cocos2d::Vec2 returnValue;
 
-    float x = p.X;
-    float y = p.Y;  
+    float x = p.X * m_screenResolutionScale;
+    float y = p.Y * m_screenResolutionScale;
     returnValue = Vec2(x, y);
 
 #if 0

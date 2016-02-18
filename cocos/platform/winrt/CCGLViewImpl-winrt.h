@@ -187,7 +187,7 @@ private:
     KeyBoardWinRT^ m_keyboard;
 
     cocos2d::EventListenerKeyboard* m_backButtonListener;
-
+    float m_screenResolutionScale;
 };
 
 NS_CC_END

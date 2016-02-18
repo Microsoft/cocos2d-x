@@ -157,7 +157,10 @@ void OpenGLESPage::CreateRenderSurface()
     {
         // The app can configure the SwapChainPanel which may boost performance.
         // By default, this template uses the default configuration.
-        mRenderSurface = mOpenGLES->CreateSurface(swapChainPanel, nullptr, nullptr);
+        //mRenderSurface = mOpenGLES->CreateSurface(swapChainPanel, nullptr, nullptr);
+
+        Windows::Graphics::Display::DisplayInformation^ info = Windows::Graphics::Display::DisplayInformation::GetForCurrentView();
+        auto screenResolutionScale = info->LogicalDpi / 96.0f;
 
         // You can configure the SwapChainPanel to render at a lower resolution and be scaled up to
         // the swapchain panel size. This scaling is often free on mobile hardware.
@@ -168,8 +171,7 @@ void OpenGLESPage::CreateRenderSurface()
         //
         // Another way is to tell the SwapChainPanel to render at a certain scale factor compared to its size.
         // e.g. if the SwapChainPanel is 1920x1280 then setting a factor of 0.5f will make the app render at 960x640
-        // float customResolutionScale = 0.5f;
-        // mRenderSurface = mOpenGLES->CreateSurface(swapChainPanel, nullptr, &customResolutionScale);
+        mRenderSurface = mOpenGLES->CreateSurface(swapChainPanel, nullptr, &screenResolutionScale);
         // 
     }
 }
